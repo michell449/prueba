@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?=$nombre_pagina?></title>
-i
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   
@@ -16,7 +15,7 @@ i
   <link rel="stylesheet" href="<?= base_url(RECURSOS_PANEL_CSS . '/adminlte.min.css') ?>">
     
   <!-- IMPORTE LOS CSS ESPECIFICOS VISTA -->
-   <?= $this->renderSection("css") ?>
+  <?= $this->renderSection("css") ?>
   
 
 </head>
@@ -851,19 +850,7 @@ i
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Dashboard v2</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v2</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+      <?= $breadcrumb ?>
     </div>
     <!-- /.content-header -->
 

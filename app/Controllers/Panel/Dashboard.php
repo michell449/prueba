@@ -12,8 +12,25 @@
             $data['nombre_pagina'] = 'Dashboard';
             $data['titulo_pagina'] = 'Dashboard';
 
+            //load helper
+            helper('breadcrumb');
+            $navegacion = array(
+                array(
+                    'href' => route_to('/dasboard'),
+                    'tarea' => 'Usuarios' ,
+                    'icon' => 'fa fa-users',
+                ),
+                array(
+                    'href' => '#',
+                    'tarea' => 'Usuario Nuevo' ,
+                    'icon' => 'fa fa-user',
+                ),
+            );
+            $data['breadcrumb'] = breadcrumb_panel($data['titulo_pagina'],$navegacion);
+
             //Queries SQL : models
 
+            // dd($data);
             return $data;
         }//end load_data
 
