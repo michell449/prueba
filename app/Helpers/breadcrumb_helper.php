@@ -12,10 +12,10 @@
                         <li class="breadcrumb-item"><a href="#"><i class="nav-icon fas fa-home"></i>Inicio</a></li>';
                         foreach ($nav as $k) {
                             if($k["href"] == '#'){
-                                $html.='<li class="breadcrumb-item active">'.$k["tarea"].'</li>';
+                                $html.='<li class="breadcrumb-item active"><i class="nav-icon '.$k["icon"].'"></i>'.$k["tarea"].'</li>';
                             }
                             else{
-                                $html.='<li class="breadcrumb-item"><a href="'.$k["href"].'">'.$k["tarea"].'</a></li>';
+                                $html.='<li class="breadcrumb-item"><a href="'.$k["href"].'"><i class="nav-icon '.$k["icon"].'"></i>'.$k["tarea"].'</a></li>';
                             }
                             
                         }//end 
