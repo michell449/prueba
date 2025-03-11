@@ -10,6 +10,7 @@ class InicioSesion extends BaseController
         $data = array();
         $data['nombre_pagina'] = 'InicioSesion';
         $data['titulo_pagina'] = 'Login';
+       
 
         return  $data;
     }
@@ -25,4 +26,16 @@ class InicioSesion extends BaseController
         //Mostrar una vista
         return $this->view_inicio($this->view, $this->load_data());
     }
-}
+
+
+    public function validar_sesion() {
+        $email = $this->request->getPost('email');
+        $pass = $this->request->getPost('password');
+        // d($email);
+        // dd($pass);
+        $tabla_usuarios = new \App\Models\Tabla_usuarios;
+        $data = $tabla_usuarios->validar_usuario($email, hash('sha256', $pass));
+        dd($data);
+    }
+}  
+

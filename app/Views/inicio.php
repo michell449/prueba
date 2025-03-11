@@ -39,7 +39,8 @@
 								</div>
 							</div>
 
-							<?php echo form_open("ruta", ["class" => "signin-form", "id" => "form_login"]) ?>
+							<?php echo form_open("validar_sesion", ["class" => "signin-form", "id" => "form_login"]) ?>
+							
 							<!-- <form action="#" class="signin-form"> -->
 							<div class="form-group mb-3">
 								<label class="label" for="name">Username</label>
@@ -49,7 +50,7 @@
 									'class' => 'form-control',
 									'value' => '',
 									'placeholder' => '',
-									'name' => 'correo_electronico',
+									'name' => 'email',
 									'required' => true
 								];
 								echo form_input($atributos);
@@ -64,7 +65,7 @@
 									'value' => '',
 									'placeholder' => '',
 									'id' => 'password-field',
-									'name' => 'correo_electronico',
+									'name' => 'password',
 									'required' => true
 								];
 								echo form_input($atributos);

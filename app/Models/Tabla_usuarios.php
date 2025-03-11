@@ -68,6 +68,15 @@
             }//end
             return -1;
         }//end deleteUser
-
+        public function validar_usuario($email=null, $pass=null){
+            return $this
+                    ->table($this->table)
+                    ->select('id_usuario')
+                    ->join('roles', 'roles.id_rol = usuarios.id_rol')
+                    ->where('email_usuario',$email)
+                    ->where('password_usuario', $pass)
+                    ->first();
+        }
     }//end Tabla_usuarios
+
 ?>

@@ -42,6 +42,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/inicio_sesion', 'InicioSesion::inicio');
+$routes->post('/validar_sesion', 'InicioSesion::validar_sesion');
 
 $routes->get('/dashboard', 'Panel/Dashboard::index');
 
